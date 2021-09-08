@@ -8,5 +8,5 @@ Fast meal ordering is used to pre order the food by the customer in the mobile b
 [![cppcheck-action](https://github.com/jnanesh9490/Stepin_FastMealOrdering/actions/workflows/cppcheck.yml/badge.svg)](https://github.com/jnanesh9490/Stepin_FastMealOrdering/actions/workflows/cppcheck.yml)
 [![C/C++ CI](https://github.com/jnanesh9490/Stepin_FastMealOrdering/actions/workflows/c-build.yml/badge.svg)](https://github.com/jnanesh9490/Stepin_FastMealOrdering/actions/workflows/c-build.yml)
 
-
+[![Valgrind](https://github.com/jnanesh9490/Stepin_FastMealOrdering/actions/workflows/Valgrind.yml/badge.svg)](https://github.com/jnanesh9490/Stepin_FastMealOrdering/actions/workflows/Valgrind.yml)
 
