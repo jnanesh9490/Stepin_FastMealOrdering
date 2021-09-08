@@ -1,5 +1,4 @@
-# Name of the project
-PROJECT_NAME = food
+PROJECT_NAME = Food
 
 # Output directory
 BUILD = build
@@ -48,25 +47,11 @@ doc:
 
 # Build and run the unit tests
 test:$(BUILD)
-	gcc $(TEST_SRC) $(INC) -o $(TEST_OUTPUT) $(INCLUDE_LIBS)
-	./$(TEST_OUTPUT)
+	gcc $(TEST_SRC) $(INC) $(TEST) -o $(TEST_OUTPUT) $(INCLUDE_LIBS)
+	./$(TEST_OUTPUT)v
 
-analyze: test memcheck staticcheck coverage sanitize_check
 
-staticcheck:
-	cppcheck --enable=all -iunity .
 
-memcheck:
-	valgrind ./$(TEST_OUTPUT)
-
-sanitize_check:
-	gcc -fsanitize=address -fno-omit-frame-pointer $(TEST_SRC) $(INC) -o $(TEST_OUTPUT) $(INCLUDE_LIBS)
-	./$(TEST_OUTPUT)
-
-coverage:$(TEST_SRC)
-	gcc -fprofile-arcs -ftest-coverage $(TEST_SRC) $(INC) -o $(TEST_OUTPUT) $(INCLUDE_LIBS)
-	./$(TEST_OUTPUT)
-	gcov -a maincode.c
 
 # Remove all the built files, invoke by `make clean`
 clean:
